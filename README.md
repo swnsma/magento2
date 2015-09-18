@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/magento/magento2.svg?branch=master)](https://travis-ci.org/magento/magento2)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/magento/magento2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 <h2>Welcome</h2>
@@ -72,3 +73,6 @@ To suggest documentation improvements, click [here][4].
 [2]: <http://devdocs.magento.com/guides/v1.0/contributor-guide/CONTRIBUTING.html#report>
 [3]: <https://github.com/magento/magento2/issues>
 [4]: <http://devdocs.magento.com>
+=======
+# magento2
+>>>>>>> ed6f29ee56b91a84cef347f0b04d285b243b23b9
