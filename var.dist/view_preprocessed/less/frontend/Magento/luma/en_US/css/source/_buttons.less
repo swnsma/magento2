@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+& when (@media-common = true) {
+
+
+
+button,
+a.action.primary {
+    .css(border-radius, @button__border-radius);
+}
+
+button {
+    &:not(.primary) {
+        .css(box-shadow, @button__shadow);
+        &:active {
+            .css(box-shadow, @button__shadow-active);
+        }
+    }
+}
+
+body {
+    &:not(._keyfocus) {
+        button {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+a.action.primary {
+    .link-as-button();
+}
+
+.action.primary {
+    .button-primary();
+}
+
+}

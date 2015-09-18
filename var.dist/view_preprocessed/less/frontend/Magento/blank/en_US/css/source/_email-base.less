@@ -1,0 +1,273 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+
+    td {
+        vertical-align: top;
+    }
+}
+
+
+.email-non-inline() {
+
+    body,
+    table,
+    td,
+    a {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    img {
+        -ms-interpolation-mode: bicubic;
+    }
+
+    table,
+    td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+    }
+}
+
+
+
+
+
+@font-size-unit-convert: false; // Prevents font-related measurements from being converted to the incompatible rem unit
+.typography-all();
+
+body {
+    font-family: @font-family__base;
+    font-weight: normal;
+    text-align: left;
+}
+
+th,
+td {
+    font-family: @font-family__base;
+}
+
+a {
+    color: @link__color;
+    text-decoration: @link__text-decoration;
+}
+
+.email-non-inline() {
+    a:visited {
+        color: @link__visited__color !important;
+        text-decoration: @link__visited__text-decoration !important;
+    }
+    a:hover {
+        color: @link__hover__color !important;
+        text-decoration: @link__hover__text-decoration !important;
+    }
+    a:active {
+        color: @link__active__color !important;
+        text-decoration: @link__active__text-decoration !important;
+    }
+
+    .no-link a {
+        color: @text__color !important;
+        cursor: default !important;
+        text-decoration: none !important;
+    }
+}
+
+
+
+
+html,
+body {
+    background-color: @email__background-color;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper-inner {
+    padding-bottom: @email-content__padding__l;
+    width: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    text-align: left; // Necessary to prevent all text from centering in Outlook 2003
+    width: @email-body__width;
+}
+
+.header {
+    padding: @email-body__padding @email-body__padding 0;
+}
+
+.main-content {
+    background-color: @email-content__background-color;
+    padding: @email-body__padding;
+}
+
+.footer {
+    padding: 0 @email-body__padding @email-body__padding; // Reduce space between body of email and closing text
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    html,
+    body {
+
+        background-color: @email-content__background-color;
+        width: 100% !important;
+    }
+
+    .main {
+        max-width: 100% !important;
+        min-width: 240px;
+        width: auto !important;
+    }
+
+    .main-content {
+        padding: @email-body__padding !important;
+    }
+}
+
+
+
+
+.button {
+    & > tr > td {
+        padding-bottom: @indent__s;
+    }
+
+    .inner-wrapper {
+        td {
+            .css(border-radius, @button__border-radius, 1);
+            background-color: @button-primary__background;
+
+            a {
+                font-size: @button__font-size;
+                color: @button-primary__color;
+                .css(border-radius, @button__border-radius, 1);
+                border: 1px solid @button-primary__background;
+                text-decoration: none;
+                padding: @button__padding;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.email-non-inline() {
+    .button {
+        .inner-wrapper {
+            td:hover {
+                background-color: @button-primary__hover__background !important;
+            }
+
+            a:active,
+            td:active {
+                background-color: @button-primary__active__background !important;
+            }
+        }
+
+        a:active,
+        a:hover,
+        a:visited {
+
+            color: @button-primary__color !important;
+            text-decoration: none !important;
+            border: 1px solid @button-primary__hover__background;
+        }
+    }
+
+    .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+        .button {
+            .inner-wrapper {
+                width: 100% !important;
+
+                td {
+                    a {
+                        font-size: @button__font-size + 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.message-info,
+.message-gift {
+    width: @table__width;
+
+    td {
+        background-color: @message-email__background;
+        border: 1px solid @message-email__border-color;
+        color: @message-email__color;
+        margin: 0;
+        padding: @email-content__padding__base;
+
+        a {
+            color: @message-email-link__color;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+        }
+    }
+}

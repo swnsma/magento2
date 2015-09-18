@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+@media-common: true;
+
+@media-target: 'all';
+
+
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+}
+
+
+
+
+& when (@media-target = 'desktop'),
+(@media-target = 'all') {
+    @media all and (max-width: (@screen__l - 1)) {
+        .media-width('max', @screen__l);
+    }
+
+    @media all and (min-width: @screen__m) {
+        .media-width('min', @screen__m);
+    }
+
+    @media all and (min-width: @screen__l) {
+        .media-width('min', @screen__l);
+    }
+
+    @media all and (min-width: @screen__xl) {
+        .media-width('min', @screen__xl);
+    }
+}
+
+
+
+
+& when (@media-target = 'mobile'),
+(@media-target = 'all') {
+    @media all and (min-width: @screen__s) {
+        .media-width('min', @screen__s);
+    }
+
+    @media all and (max-width: (@screen__m - 1)) {
+        .media-width('max', @screen__m);
+    }
+
+    @media all and (max-width: (@screen__s - 1)) {
+        .media-width('max', @screen__s);
+    }
+
+    @media all and (max-width: (@screen__xs - 1)) {
+        .media-width('max', @screen__xs);
+    }
+}

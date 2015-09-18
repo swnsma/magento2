@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+
+
+
+.abs-icon {
+    -webkit-font-smoothing: antialiased;
+    font-family: @icons-admin__font-name;
+    line-height: 1;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+}
+
+
+
+
+.validation-symbol {
+    &:after {
+        content: '*';
+        color: @validation__color;
+        font-weight: @font-weight__regular;
+        margin-left: 3px;
+    }
+}
+
+
+
+
+.abs-modal-overlay {
+    background: @popup-overlay__background-color;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+.abs-visually-hidden {
+    .visually-hidden();
+}
+
+.extend__visually-hidden() {
+    &:extend(.abs-visually-hidden all);
+}
+
+.abs-visually-hidden-reset {
+    .visually-hidden-reset();
+}
+
+.extend__visually-hidden-reset() {
+    &:extend(.abs-visually-hidden-reset all);
+}
+
+.abs-clearfix {
+    .clearfix();
+}
+
+.abs-clearer {
+    .clearer();
+}
+
+.extend__clearer() {
+    &:extend(.abs-clearer all);
+}
+
+.abs-list-reset-styles {
+    .list-reset-styles();
+}
+
+.extend__list-reset-styles() {
+    &:extend(.abs-list-reset-styles all);
+}

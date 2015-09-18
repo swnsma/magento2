@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+@checkout-field-validation__border-color: @form-element-validation__border-error;
+
+
+
+
+& when (@media-common = true) {
+    .field {
+        .control {
+            &._with-tooltip {
+                &:extend(.abs-field-tooltip all);
+            }
+        }
+        &._error {
+            .control {
+                input,
+                select,
+                textarea {
+                    .css(border-color, @checkout-field-validation__border-color);
+                }
+            }
+        }
+    }
+}
