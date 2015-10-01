@@ -3,8 +3,9 @@ return array (
   'modules' => 
   array (
     'Ashsmith_HelloWorld' => 1,
-    'Magenticians_Launcher' => 1,
+    'ISM_DI' => 1,
     'Magento_Store' => 1,
+    'Magento_AdminNotification' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Directory' => 1,
     'Magento_Theme' => 1,
@@ -79,7 +80,7 @@ return array (
     'Magento_SendFriend' => 1,
     'Magento_Shipping' => 1,
     'Magento_Sitemap' => 1,
-    'Magento_AdminNotification' => 1,
+    'Magenticians_Launcher' => 1,
     'Magento_Tax' => 1,
     'Magento_TaxImportExport' => 1,
     'Magento_Captcha' => 1,
