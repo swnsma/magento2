@@ -1,5 +1,5 @@
 .idea
-/app/etc/env.php
+/app/etc/
 /var/
 /pub/
 /apalogs
